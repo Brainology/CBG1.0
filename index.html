@@ -16,16 +16,25 @@
       </div>
     </header>
 
-    <div id="game-board"></div>
-    
-    <div id="ad-space">
-      <!-- Placeholder for future ad code -->
-      <p>Ad space will be displayed here.</p>
+    <!-- Start button for new players -->
+    <div id="start-screen">
+      <button id="start-btn">Start Game</button>
+    </div>
+
+    <!-- Game area that becomes visible after starting the game -->
+    <div id="game-area" style="display: none;">
+      <div id="game-board"></div>
+
+      <!-- End of game buttons for share and restart -->
+      <div id="end-screen" style="display: none;">
+        <button id="share-btn">Share Score</button>
+        <button id="restart-btn">Restart Game</button>
+      </div>
     </div>
     
-    <footer>
-      <button id="share-btn">Share Score</button>
-    </footer>
+    <div id="ad-space">
+      <p>Ad space will be displayed here.</p>
+    </div>
   </div>
 
   <script src="game.js"></script>
