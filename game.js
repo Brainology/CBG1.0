@@ -125,4 +125,16 @@ shareBtn.addEventListener('click', () => {
       url: window.location.href
     });
   } else {
-    alert('Share feature not
+    alert('Share feature not supported on your device. Copy this text to share manually: ' + shareText);
+  }
+});
+
+// Toggle Dark/Light Mode
+toggleModeBtn.addEventListener('click', () => {
+  document.body.classList.toggle('light-mode');
+});
+
+// Request Notification Permission on Page Load
+if (window.Notification && Notification.permission !== "granted") {
+  Notification.requestPermission();
+}
