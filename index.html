@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Colorblind Test Game</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -14,18 +15,28 @@
         <span id="level">Level: 1</span>
         <span id="score">Score: 0</span>
       </div>
+      <button id="toggle-mode-btn">Toggle Light/Dark Mode</button>
     </header>
 
-    <div id="game-board"></div>
-    
+    <!-- Start button for new players -->
+    <div id="start-screen">
+      <button id="start-btn">Start Game</button>
+    </div>
+
+    <!-- Game area that becomes visible after starting the game -->
+    <div id="game-area" style="display: none;">
+      <div id="game-board"></div>
+
+      <!-- End of game buttons for share and restart -->
+      <div id="end-screen" style="display: none;">
+        <button id="share-btn">Share Score</button>
+        <button id="restart-btn">Restart Game</button>
+      </div>
+    </div>
+
     <div id="ad-space">
-      <!-- Placeholder for future ad code -->
       <p>Ad space will be displayed here.</p>
     </div>
-    
-    <footer>
-      <button id="share-btn">Share Score</button>
-    </footer>
   </div>
 
   <script src="game.js"></script>
