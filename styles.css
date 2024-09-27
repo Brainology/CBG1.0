@@ -1,13 +1,15 @@
-/* Basic styling */
+/* Import Poppins font */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #f0f0f0;
+  background-color: #121212; /* Dark mode default */
+  color: #ffffff;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .game-container {
@@ -40,7 +42,7 @@ body {
   margin-top: 20px;
 }
 
-#share-btn {
+#start-btn, #share-btn, #restart-btn, #toggle-mode-btn {
   background-color: #007bff;
   color: white;
   border: none;
@@ -49,8 +51,38 @@ body {
   cursor: pointer;
 }
 
-#share-btn:hover {
+#start-btn:hover, #share-btn:hover, #restart-btn:hover, #toggle-mode-btn:hover {
   background-color: #0056b3;
+}
+
+#start-screen, #end-screen {
+  margin-top: 20px;
+}
+
+#game-area {
+  transition: opacity 0.5s;
+}
+
+#end-screen {
+  display: none;
+}
+
+#end-screen.active {
+  display: block;
+}
+
+/* Light Mode */
+body.light-mode {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+body.light-mode .tile {
+  border: 1px solid #ccc;
+}
+
+button {
+  font-family: 'Poppins', sans-serif;
 }
 
 /* Responsive Grid */
