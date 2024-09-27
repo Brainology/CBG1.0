@@ -40,7 +40,7 @@ body {
   margin-top: 20px;
 }
 
-#share-btn {
+#start-btn, #share-btn, #restart-btn {
   background-color: #007bff;
   color: white;
   border: none;
@@ -49,8 +49,12 @@ body {
   cursor: pointer;
 }
 
-#share-btn:hover {
+#start-btn:hover, #share-btn:hover, #restart-btn:hover {
   background-color: #0056b3;
+}
+
+#start-screen, #end-screen {
+  margin-top: 20px;
 }
 
 /* Responsive Grid */
